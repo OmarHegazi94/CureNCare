@@ -1,0 +1,33 @@
+<div id="custom-overlay" [style.display]="splash ? 'flex': 'none'">
+  <div class="flb">
+    <div class="Aligner-item Aligner-item--top"></div>
+    <img src="assets/logo.png">
+    <div class="Aligner-item Aligner-item--bottom"></div>
+  </div>
+</div>
+<ion-header>
+ 
+  <ion-navbar color="primary">
+    <ion-title>قاعدة العملاء</ion-title>
+    <ion-buttons end> 
+      <button ion-button icon-only 
+      (click)="navigateToAddShoppingPage()">
+        <ion-icon name="add"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-list>
+    <!-- Repeat the ion-item for as many items that we have inside of our shopping list. -->
+    <ion-item *ngFor="let item of shoppingListRef$ | async" (click)="selectShoppingItem(item)">
+      <h2>اسم العميل: {{item.itemName}}</h2>
+      <h3>رقم العميل: {{item.itemNumber}}</h3>
+    </ion-item>
+  </ion-list>
+
+</ion-content>
