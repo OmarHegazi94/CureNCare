@@ -11,8 +11,6 @@ import { EditShoppingItemPage } from '../edit-shopping-item/edit-shopping-item';
   templateUrl: 'shopping-list.html',
 })
 export class ShoppingListPage {
-  
-  splash = true;
 
   shoppingListRef$: FirebaseListObservable<ShoppingItem[]>
 
@@ -79,14 +77,6 @@ export class ShoppingListPage {
   navigateToAddShoppingPage() {
     // Navigate the user to the AddShoppingPage
     this.navCtrl.push(AddShoppingPage);
-  }
-
-  ionViewDidLoad() {
-
-    setTimeout(() => {
-      this.splash = false;
-    }, 4000);
-    
   }
 
 }

@@ -12,8 +12,9 @@ import { MyApp } from './app.component';
 import { ShoppingListPage } from '../pages/shopping-list/shopping-list';
 import { AddShoppingPage } from '../pages/add-shopping/add-shopping';
 import { EditShoppingItemPage } from '../pages/edit-shopping-item/edit-shopping-item';
-// import { AboutPage } from '../pages/about/about';
 // import { TabsPage } from '../pages/tabs/tabs';
+import { PriceListPage } from '../pages/price-list/price-list';
+import { AboutPage } from '../pages/about/about';
 
 @NgModule({
   declarations: [
@@ -21,12 +22,14 @@ import { EditShoppingItemPage } from '../pages/edit-shopping-item/edit-shopping-
     ShoppingListPage,
     AddShoppingPage,
     EditShoppingItemPage,
-    // AboutPage,
-    // TabsPage
+    // TabsPage,
+    AboutPage,
+    PriceListPage
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
+    // IonicPageModule.forChild(TabsPage),
     // Initialise AngularFire with credientials from the dashboard
     AngularFireModule.initializeApp(FIREBASE_CREDENTIALS),
     // Import the AngularFireDatabaseModule to use database interactions
@@ -39,8 +42,9 @@ import { EditShoppingItemPage } from '../pages/edit-shopping-item/edit-shopping-
     ShoppingListPage,
     AddShoppingPage,
     EditShoppingItemPage,
-    // AboutPage,
-    // TabsPage
+    // TabsPage,
+    AboutPage,
+    PriceListPage
   ],
   providers: [
     StatusBar,
